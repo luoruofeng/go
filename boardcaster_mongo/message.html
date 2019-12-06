@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{.UserName}}</title>
+	</head>
+	<body>
+		{{range .Messages}}
+            <ul>
+                <li>{{ .Content }}</li>
+                <li>{{ .Time }}</li>
+            </ul>
+        {{else}}
+            <div>
+                <strong>no Message</strong>
+            </div>
+        {{end}}
+	</body>
+</html>
