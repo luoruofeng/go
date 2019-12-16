@@ -7,5 +7,6 @@ func main() {
 	// boardcaster_mongo.ServerApp()
 	// boardcaster_mongo.ClientApp()
 	// router_demo.Web()
-	middleware.SimpleApp()
+	// middleware.SimpleApp()
+	middleware.ChiApp()
 }
