@@ -8,5 +8,6 @@ func main() {
 	// boardcaster_mongo.ClientApp()
 	// router_demo.Web()
 	// middleware.SimpleApp()
-	middleware.ChiApp()
+	// middleware.ChiApp()
+	middleware.GinApp()
 }
