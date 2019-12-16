@@ -1,7 +1,8 @@
 package main
 
+import "go_demo/db"
+
 // import "go_demo/router_demo"
-import "go_demo/middleware"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -9,5 +10,6 @@ func main() {
 	// router_demo.Web()
 	// middleware.SimpleApp()
 	// middleware.ChiApp()
-	middleware.GinApp()
+	// middleware.GinApp()
+	db.MysqlApp()
 }
