@@ -8,9 +8,9 @@ import (
 )
 
 // wrk 测试结果
-// wrk -c 10 -d 10s http://localhost:9000/hello
+// wrk -c 10 -d 10s -t8 http://localhost:9000/hello
 
-//   2 threads and 10 connections
+//   8 threads and 10 connections
 //   Thread Stats   Avg      Stdev     Max   +/- Stdev
 //     Latency     4.89ms   15.68ms 208.76ms   93.54%
 //     Req/Sec    10.16k     6.11k   24.37k    62.37%

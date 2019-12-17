@@ -3,8 +3,8 @@ from http import HTTPStatus
 import socketserver
 
 # wrk 测试结果
-# wrk -c 10 -d 10s http://localhost:8000/hello
-#   2 threads and 10 connections
+# wrk -c 10 -d 10s -t8 http://localhost:8000/hello
+#   8 threads and 10 connections
 
 #   Thread Stats   Avg      Stdev     Max   +/- Stdev
 #     Latency     2.08ms    2.03ms  18.95ms   85.90%
