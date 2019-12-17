@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/db"
+import "go_demo/qps"
 
 // import "go_demo/router_demo"
 
@@ -12,5 +12,6 @@ func main() {
 	// middleware.ChiApp()
 	// middleware.GinApp()
 	// db.MysqlApp()
-	db.GormApp()
+	// db.GormApp()
+	qps.QpsApp()
 }
