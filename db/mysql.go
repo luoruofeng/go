@@ -4,15 +4,15 @@ import (
 	"context"
 	"database/sql"
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"time"
 
 	"github.com/go-sql-driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
 )
-import _ "github.com/go-sql-driver/mysql"
 
 /*
 DOCKER operation:
@@ -175,10 +175,4 @@ func MysqlApp() {
 	s := &Service{db: db}
 
 	http.ListenAndServe(":8080", s)
-
-	var student Student
-	row := db.QueryRow("SELECT name,sex,birth FROM student WHERE name=?", "ruo")
-	fmt.Println(row)
-	row.Scan(&student)
-	fmt.Println(student)
 }
