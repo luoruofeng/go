@@ -1,7 +1,7 @@
-package main
+// package main
 
-import "go_demo/boardcaster_mongo"
+// import "go_demo/boardcaster_mongo"
 
-func main() {
-	boardcaster_mongo.ClientApp()
-}
+// func main() {
+// 	boardcaster_mongo.ClientApp()
+// }
