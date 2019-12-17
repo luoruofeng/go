@@ -45,13 +45,6 @@ SQL operation:
 	INSERT INTO student (name,sex,birth) VALUES("luo",0,"1983-11-23 00:00:00"),("ruo",1,"1988-4-6 22:14:04"),("feng",0,"1990-12-3 04:00:00");
 	SELECT * FROM student;
 */
-
-type Student struct {
-	Name  string
-	Sex   bool
-	Birth time.Time
-}
-
 type Service struct {
 	db *sql.DB
 }

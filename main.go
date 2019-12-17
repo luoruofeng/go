@@ -11,5 +11,6 @@ func main() {
 	// middleware.SimpleApp()
 	// middleware.ChiApp()
 	// middleware.GinApp()
-	db.MysqlApp()
+	// db.MysqlApp()
+	db.GormApp()
 }
