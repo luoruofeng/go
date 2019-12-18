@@ -1,0 +1,45 @@
+//download protobuf https://developers.google.com/protocol-buffers/docs/downloads.html
+
+//generate the classes , you need to run the protocol buffer compiler protoc on your .proto
+//go get -u github.com/golang/protobuf/protoc-gen-go
+//The compiler plugin protoc-gen-go will be installed in $GOBIN, defaulting to $GOPATH/bin. It must be in your $PATH for the protocol compiler protoc to find it.
+
+// run the compiler
+//DEMO:  protoc -I=$SRC_DIR --go_out=$DST_DIR $SRC_DIR/addressbook.proto
+
+//current case:
+//protoc -I=./ --go_out=./tutorial/ ./addr.proto
+
+syntax = "proto3";
+package tutorial;
+
+import "google/protobuf/timestamp.proto";
+
+
+//每个元素上的“ = 1”，“ = 2”标记标识该字段在二进制编码中使用的唯一“标记”。标签编号1至15与较高的编号相比，编码所需的字节减少了一个字节，因此，为了进行优化，您可以决定将这些标签用于常用或重复的元素，而将标签16和更高的标签用于较少使用的可选元素。
+message Person {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+
+    enum PhotoType{
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+    }
+
+    message PhoneNumber{
+        string number = 1;
+        PhotoType type = 2;
+    }
+
+    //如果一个字段为repeated，则该字段可以重复任意次（包括零次）。重复值的顺序将保留在协议缓冲区中。将重复字段视为动态大小的数组。
+    repeated PhoneNumber phones = 4;
+
+    google.protobuf.Timestamp last_updated = 5;
+}
+
+// Our address book file is just one of these.
+message AddressBook {
+    repeated Person people = 1;
+  }
