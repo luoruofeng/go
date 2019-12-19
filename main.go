@@ -1,8 +1,6 @@
 package main
 
-import (
-	"go_demo/protobuf"
-)
+import "go_demo/grpc"
 
 // import "go_demo/router_demo"
 
@@ -17,5 +15,6 @@ func main() {
 	// db.GormApp()
 
 	// qps.QpsApp()
-	protobuf.ProtoApp()
+	// protobuf.ProtoApp()
+	grpc.GrpcApp()
 }

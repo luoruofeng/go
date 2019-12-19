@@ -1,0 +1,18 @@
+// run `protoc` command (with the grpc plugin)
+//protoc -I helloworld/ helloworld/helloworld.proto --go_out=plugins=grpc:helloworld
+//plugins=grpc:所在文件夹名
+syntax = "proto3";
+package helloworld;
+
+service Greeter {
+    rpc SayHello(HelloRequest) returns (HelloReply){}
+    rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest{
+    string name = 1;
+}
+
+message HelloReply{
+    string message = 1;
+}
