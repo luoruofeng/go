@@ -18,5 +18,6 @@ func main() {
 	// for_c_lang.OutterApp()
 	// for_c_lang.BasicApp()
 	// go_implement_c.BasicApp()
-	go_implement_c.OutterApp()
+	// go_implement_c.OutterApp2()
+	go_implement_c.PredefineApp()
 }

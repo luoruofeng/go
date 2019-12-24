@@ -13,3 +13,9 @@ func SayHelloImpl(s *C.char){
 func OutterApp(){
 	SayHelloImpl(C.CString("golang implement header of C, hello.h"))
 }
+
+
+//call C func
+func OutterApp2(){
+	C.SayHelloImpl(C.CString("c func"))
+}
