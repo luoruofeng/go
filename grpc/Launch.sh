@@ -6,9 +6,11 @@ export TEMPDIR=$(mktemp)
 trap "rm -rf ${TEMPDIR}" EXIT
 
 clean(){
-    jobss -p | xargs kill -9
+    jobs -p | xargs kill -9
     wait
 }
+
+trap clean EXIT
 
 fail () {
     echo "$(tput setaf 1) $1 $(tput sgr 0)"
@@ -136,6 +138,4 @@ else
     $(cat $CLIENT_LOG)
     "
 fi
-
-clean()
 
