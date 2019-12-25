@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/for_c_lang/go_implement_c"
+import "go_demo/for_c_lang/micro"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -19,5 +19,6 @@ func main() {
 	// for_c_lang.BasicApp()
 	// go_implement_c.BasicApp()
 	// go_implement_c.OutterApp2()
-	go_implement_c.PredefineApp()
+	// go_implement_c.PredefineApp()
+	micro.DiffOsApp()
 }
