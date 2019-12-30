@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/distributed"
+import "go_demo/zookeeper"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -21,5 +21,5 @@ func main() {
 	// go_implement_c.OutterApp2()
 	// go_implement_c.PredefineApp()
 	// micro.DiffOsApp()
-	distributed.RedisLockApp()
+	zookeeper.ZKWatchAPP()
 }
