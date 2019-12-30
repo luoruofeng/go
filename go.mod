@@ -3,6 +3,7 @@ module go_demo
 go 1.13
 
 require (
+	github.com/bwmarrin/snowflake v0.3.0
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-chi/chi v4.0.2+incompatible
 	github.com/go-redis/redis v6.15.6+incompatible

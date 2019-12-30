@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/for_c_lang/micro"
+import "go_demo/distributed"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -20,5 +20,6 @@ func main() {
 	// go_implement_c.BasicApp()
 	// go_implement_c.OutterApp2()
 	// go_implement_c.PredefineApp()
-	micro.DiffOsApp()
+	// micro.DiffOsApp()
+	distributed.RedisLockApp()
 }
