@@ -9,6 +9,21 @@ import (
 	"github.com/coreos/etcd/client"
 )
 
+//etcdctl get /configs/remote_config.json
+
+//etcdctl -o json get /configs/remote_config.json
+// {
+// 	"action": "get",
+// 	"node": {
+// 		"key": "/configs/remote_config.json",
+// 		"value": "{\"addr\":\"addr\",\"aes_key\":\"\",\"https\":false,\"secret\":\"\",\"private_key_path\":\"\",\"cert_file_path\":\"\"}",
+// 		"nodes": null,
+// 		"createdIndex": 47,
+// 		"modifiedIndex": 47
+// 	},
+// 	"prevNode": null
+// }
+
 var configPath = `/configs/remote_config.json`
 var kapi client.KeysAPI
 
@@ -52,20 +67,20 @@ func Init() {
 
 		log.Println("init value is: ", string(b))
 
-		initConfig()
+		// initConfig()
 	}
 }
 
-func initConfig() {
-	if resp, err := kapi.Get(context.Background(), configPath, nil); err != nil {
-		log.Fatal(err)
-	} else {
-		err = json.Unmarshal([]byte(resp.Node.Value), &appConfig)
-		if err != nil {
-			log.Fatal(err)
-		}
-	}
-}
+// func initConfig() {
+// 	if resp, err := kapi.Get(context.Background(), configPath, nil); err != nil {
+// 		log.Fatal(err)
+// 	} else {
+// 		err = json.Unmarshal([]byte(resp.Node.Value), &appConfig)
+// 		if err != nil {
+// 			log.Fatal(err)
+// 		}
+// 	}
+// }
 
 func watchAndUpdate() {
 	w := kapi.Watcher(configPath, nil)
@@ -100,8 +115,12 @@ func UpdateConfigApp() ConfigStruct {
 	//change value for test watcher
 	time.Sleep(time.Second * 4)
 	appConfig.Addr = "addr"
+	appConfig.CertFilePath = "CertFilePath"
 	b, _ := json.Marshal(appConfig)
 	kapi.Set(context.Background(), configPath, string(b), nil)
 
+	//你可以手动修改
+	//etcdctl set /configs/remote_config.json \{\"addr\"\:\"addr2\",\"aes_key\"\:\"\",\"https\"\:false,\"secret\"\:\"\",\"private_key_path\"\:\"\",\"cert_file_path\"\:\"CertFilePath3\"\}
+	time.Sleep(time.Second * 1000)
 	return getConfig()
 }
