@@ -7,7 +7,7 @@ import (
 	"github.com/samuel/go-zookeeper/zk"
 )
 
-func ZkChildWatchTest() {
+func ZkChildWatchApp() {
 	fmt.Printf("ZkChildWatchTest")
 
 	var hosts = []string{"localhost:2181"}

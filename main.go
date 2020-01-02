@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/zookeeper"
+import "go_demo/etcd"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -21,5 +21,6 @@ func main() {
 	// go_implement_c.OutterApp2()
 	// go_implement_c.PredefineApp()
 	// micro.DiffOsApp()
-	zookeeper.ZKWatchAPP()
+	// distributed.EtcdApp()
+	etcd.EtcdClientAPP()
 }
