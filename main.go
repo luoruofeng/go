@@ -22,5 +22,5 @@ func main() {
 	// go_implement_c.PredefineApp()
 	// micro.DiffOsApp()
 	// distributed.EtcdApp()
-	etcd.EtcdClientAPP()
+	etcd.UpdateConfigApp()
 }

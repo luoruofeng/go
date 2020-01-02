@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/coreos/etcd v3.3.18+incompatible // indirect
+	github.com/coreos/etcd v3.3.18+incompatible
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-00010101000000-000000000000 // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
@@ -30,6 +30,7 @@ require (
 	go.mongodb.org/mongo-driver v1.1.3
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/crypto v0.0.0-20191202143827-86a70503ff7e // indirect
+	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 	golang.org/x/text v0.3.2 // indirect
 	google.golang.org/grpc v1.19.0
