@@ -1,6 +1,6 @@
 package main
 
-import "go_demo/etcd"
+import "go_demo/elasticsearch"
 
 func main() {
 	// boardcaster_mongo.ServerApp()
@@ -22,5 +22,5 @@ func main() {
 	// go_implement_c.PredefineApp()
 	// micro.DiffOsApp()
 	// distributed.EtcdApp()
-	etcd.UpdateConfigApp()
+	elasticsearch.ESAPP()
 }

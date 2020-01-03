@@ -8,17 +8,25 @@ require (
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-00010101000000-000000000000 // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
+	github.com/elastic/beats v7.5.1+incompatible
+	github.com/elastic/go-elasticsearch/v7 v7.5.0
+	github.com/elastic/go-structform v0.0.6 // indirect
+	github.com/elastic/go-ucfg v0.7.0 // indirect
+	github.com/fatih/color v1.8.0 // indirect
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-chi/chi v4.0.2+incompatible
 	github.com/go-redis/redis v6.15.6+incompatible
 	github.com/go-sql-driver/mysql v1.4.1
+	github.com/gofrs/uuid v3.2.0+incompatible // indirect
 	github.com/golang/mock v1.3.1 // indirect
 	github.com/golang/protobuf v1.3.2
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-cmp v0.3.1 // indirect
 	github.com/google/uuid v1.1.1 // indirect
 	github.com/jinzhu/gorm v1.9.11
+	github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901 // indirect
 	github.com/julienschmidt/httprouter v1.3.0
+	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/robfig/cron/v3 v3.0.0
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
 	github.com/sirupsen/logrus v1.4.2
