@@ -9,7 +9,9 @@ require (
 	github.com/coreos/go-systemd v0.0.0-00010101000000-000000000000 // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/elastic/beats v7.5.1+incompatible
+	github.com/elastic/go-elasticsearch v0.0.0
 	github.com/elastic/go-elasticsearch/v7 v7.5.0
+	github.com/elastic/go-elasticsearch/v8 v8.0.0-20191218082911-5398a82b748f
 	github.com/elastic/go-structform v0.0.6 // indirect
 	github.com/elastic/go-ucfg v0.7.0 // indirect
 	github.com/fatih/color v1.8.0 // indirect
