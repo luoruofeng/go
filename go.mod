@@ -15,6 +15,7 @@ require (
 	github.com/elastic/go-structform v0.0.6 // indirect
 	github.com/elastic/go-ucfg v0.7.0 // indirect
 	github.com/fatih/color v1.8.0 // indirect
+	github.com/gin-gonic/autotls v0.0.0-20191129055149-ffaac874b99f
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-chi/chi v4.0.2+incompatible
 	github.com/go-redis/redis v6.15.6+incompatible
@@ -25,6 +26,7 @@ require (
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-cmp v0.3.1 // indirect
 	github.com/google/uuid v1.1.1 // indirect
+	github.com/jessevdk/go-assets v0.0.0-20160921144138-4f4301a06e15
 	github.com/jinzhu/gorm v1.9.11
 	github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901 // indirect
 	github.com/julienschmidt/httprouter v1.3.0
@@ -32,6 +34,8 @@ require (
 	github.com/robfig/cron/v3 v3.0.0
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
 	github.com/sirupsen/logrus v1.4.2
+	github.com/stretchr/testify v1.4.0
+	github.com/thinkerou/favicon v0.1.0 // indirect
 	github.com/tidwall/pretty v1.0.0 // indirect
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
 	github.com/xdg/stringprep v1.0.0 // indirect
@@ -44,6 +48,7 @@ require (
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 	golang.org/x/text v0.3.2 // indirect
 	google.golang.org/grpc v1.19.0
+	gopkg.in/go-playground/validator.v9 v9.29.1
 )
 
 replace github.com/coreos/go-systemd => /Users/luoruofeng/go/src/github.com/coreos/go-systemd
