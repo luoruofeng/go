@@ -37,7 +37,7 @@ func roomGET(c *gin.Context) {
 
 func roomPOST(c *gin.Context) {
 	rid := c.Param("room_id")
-	uid := c.PostForm("userid")
+	uid := c.PostForm("user")
 	m := c.PostForm("message")
 
 	roomManager.Submit(uid, rid, m)
