@@ -6,11 +6,20 @@ import (
 	"io"
 	"math/rand"
 	"net/http"
+	"runtime"
 )
 
 var roomManager *Manager
 
+func ConfigRuntime() {
+	nuCPU := runtime.NumCPU()
+	runtime.GOMAXPROCS(nuCPU)
+	fmt.Printf("Running with %d CPUs\n", nuCPU)
+}
+
 func main() {
+	ConfigRuntime()
+
 	roomManager = NewRoomManager()
 
 	g := gin.Default()
