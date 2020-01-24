@@ -2,17 +2,25 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"io"
 	"log"
 	"net"
+	"time"
 )
 
-type Client chan string
+type Info struct {
+	Name       string    `json:"name"`
+	Message    string    `json:"message"`
+	CreateTime time.Time `json:"create_time"`
+}
+
+type Client chan Info
 
 var (
 	entering = make(chan Client)
 	leaving  = make(chan Client)
-	messages = make(chan string)
+	messages = make(chan Info)
 )
 
 func broadcaster() {
@@ -24,11 +32,19 @@ func broadcaster() {
 		case c := <-leaving:
 			close(c)
 			delete(clients, c)
-		case m := <-messages:
+		case info := <-messages:
 			for c := range clients {
-				c <- m + "\n"
+				c <- info
 			}
 		}
+	}
+}
+
+func NewInfo(name string, message string, createTime time.Time) Info {
+	return Info{
+		Name:       name,
+		Message:    message,
+		CreateTime: createTime,
 	}
 }
 
@@ -38,24 +54,25 @@ func handleConnection(conn net.Conn) {
 	name := conn.RemoteAddr().String()
 	c := make(Client)
 	go clientWriter(conn, c)
-	c <- "hello " + name
+	c <- NewInfo(name, "hello "+name, time.Now())
 
 	entering <- c
-	messages <- name + " is coming"
+	messages <- NewInfo(name, name+" is coming", time.Now())
 
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
-		messages <- name + " : " + input.Text()
+		messages <- NewInfo(name, name+" : "+input.Text(), time.Now())
 	}
 
 	leaving <- c
-	messages <- "bye " + name
+	messages <- NewInfo(name, "bye "+name, time.Now())
 
 }
 
-func clientWriter(conn net.Conn, ch <-chan string) {
-	for m := range ch {
-		io.WriteString(conn, m)
+func clientWriter(conn net.Conn, ch <-chan Info) {
+	for info := range ch {
+		text, _ := json.Marshal(info)
+		io.WriteString(conn, string(text)+"\n")
 	}
 }
 
