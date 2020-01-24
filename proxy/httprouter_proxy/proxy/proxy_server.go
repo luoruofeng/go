@@ -87,6 +87,9 @@ func uploadPageHandle(w http.ResponseWriter, r *http.Request, params httprouter.
 	t.Execute(w, map[string]interface{}{"title": "upload video", "videoname": "testvideo"})
 }
 
+//运行proxy go run *.go
+//运行real-server go run real_server.go
+
 //测试代理
 // curl -XGET localhost:8080/hellog
 // curl -XPOST localhost:8080/hellop -d "name=luo&age=11"
