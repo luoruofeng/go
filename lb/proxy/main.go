@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
-	"proxy_mod/config"
 )
 
 type proxyHandler struct {
