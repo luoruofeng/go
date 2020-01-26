@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"github.com/luoruofeng/config"
 )
 
 type proxyHandler struct {

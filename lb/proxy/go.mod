@@ -1,7 +1,7 @@
-module github.com/luoruofeng/go/lb/proxy
+module github.com/luoruofeng/proxy
 
+require github.com/luoruofeng/config v0.0.1
 
-require "other_mod_config"
-replace "other_mod_config" => "../config"
+replace github.com/luoruofeng/config v0.0.1 => ../config
 
 go 1.13

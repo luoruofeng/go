@@ -1,4 +1,4 @@
-module rs_mod
+module github.com/luoruofeng/rs
 
 go 1.13
 
