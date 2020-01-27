@@ -5,7 +5,10 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	//使用另一个还没有上传的mod需要修改go.mod，添加replace
 	"github.com/luoruofeng/config"
+	//使用当前mod中的其他包
+	// "github.com/luoruofeng/proxy/config"
 )
 
 type proxyHandler struct {

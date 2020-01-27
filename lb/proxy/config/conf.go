@@ -26,7 +26,8 @@ func init() {
 
 	err := decoder.Decode(configuration)
 	if err != nil {
-		log.Fatal("../conf.json read failed!!")
+
+		log.Fatal("../conf.json read failed!!!!!!")
 		panic(err)
 	}
 }
