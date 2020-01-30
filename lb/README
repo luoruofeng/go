@@ -1,0 +1,2 @@
+1.先修改config中conf.json配置文件路径
+2.修改conf.json中lb_addr为云服务slb的私网IP

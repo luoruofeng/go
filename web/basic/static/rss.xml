@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo Theme MemE</title>
+        <link>http://127.0.0.1:9999/</link>
+        <description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description>
+        <generator>Hugo 0.59.1 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>reuixiy@gmail.com (reuixiy)</managingEditor>
+        
+        
+            <webMaster>reuixiy@gmail.com (reuixiy)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+        
+        <lastBuildDate>Thu, 30 Jan 2020 15:05:15 +0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss+xml" href="http://127.0.0.1:9999/rss.xml" />
+        
+        
+            <item>
+                <title>My Second Post</title>
+                <link>http://127.0.0.1:9999/posts2/my-second-post/</link>
+                <guid isPermaLink="true">http://127.0.0.1:9999/posts2/my-second-post/</guid>
+                <pubDate>Thu, 30 Jan 2020 13:08:28 +0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description><![CDATA[]]></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>My First Post</title>
+                <link>http://127.0.0.1:9999/posts2/my-first-post/</link>
+                <guid isPermaLink="true">http://127.0.0.1:9999/posts2/my-first-post/</guid>
+                <pubDate>Thu, 30 Jan 2020 13:08:24 +0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description><![CDATA[]]></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>

@@ -23,6 +23,12 @@ func main() {
 	flag.Parse()
 
 	r := httprouter.New()
+
+	r.HEAD("/hello",func(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+		w.WriteHeader(http.StatusOK)
+		io.WriteString("这个head是为了避免阿里云SLB对ECS的监控监控4XX的错误，如果SLB配置时候勾选了4XX也不需要这个HEAD")
+	})
+
 	r.GET("/hello", func(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 		var builder strings.Builder
 		builder.WriteString("hello, here is real-server\n")
