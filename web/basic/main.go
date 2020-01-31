@@ -68,6 +68,11 @@ func main() {
 		t.Execute(w, NewIndexParam())
 	})
 
+	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+		t := template.Must(template.ParseFiles("static/about/hello-world/index.html", "static/tmpl/foot.html"))
+		t.Execute(w, map[string]interface{}{"Title": "我是标题", "Body": "我是身体", "IndexParam": NewIndexParam()})
+	})
+
 	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("static"))))
 
 	err := http.ListenAndServe(":9999", nil)

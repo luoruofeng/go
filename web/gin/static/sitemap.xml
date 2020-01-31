@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://127.0.0.1:9999/about/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/about/hello-world/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/categories/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/categories/categories-second/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/categories/categories-first/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts2/my-second-post/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts2/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts2/my-first-post/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts/my-third-post/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/posts/my-second-post/</loc>
+    <lastmod>2020-01-30T14:59:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://127.0.0.1:9999/tags/</loc>
+  </url>
+  
+</urlset>
